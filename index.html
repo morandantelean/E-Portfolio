@@ -1,0 +1,1654 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lean Morandante | Front-End Web Developer & Cum Laude IT Graduate</title>
+  <meta name="description" content="Portfolio of Lean Morandante, Front-End Web Developer with 2+ years of experience building responsive, accessible, high-performance web applications. Cum Laude IT Graduate from Caraga State University.">
+  <meta name="keywords" content="Lean Morandante, Front-End Developer, Web Developer, HTML, CSS, JavaScript, Portfolio, Caraga State University, Responsive Web Design">
+  <meta name="author" content="Lean Morandante">
+  
+  <!-- Open Graph & Social Meta -->
+  <meta property="og:title" content="Lean Morandante | Front-End Web Developer & Cum Laude IT Graduate">
+  <meta property="og:description" content="Front-end developer with 2+ years of experience, +30% page speed improvement, and Cum Laude IT degree. Explore projects, certificates, and resume.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/lean_profile.jpg">
+  
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+  
+  <!-- Google Fonts Preconnect & Import -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Ambient background glow elements -->
+  <div class="ambient-glow glow-1" aria-hidden="true"></div>
+  <div class="ambient-glow glow-2" aria-hidden="true"></div>
+  <div class="ambient-glow glow-3" aria-hidden="true"></div>
+
+  <!-- Interactive Constellation Particles Canvas -->
+  <canvas id="heroCanvas" class="hero-canvas" aria-hidden="true"></canvas>
+
+  <!-- Announcement Bar -->
+  <aside class="announcement-bar" id="announcementBar">
+    <div class="announcement-content">
+      <span class="announcement-badge">NEW</span>
+      <span>👋 Welcome! Explore my Front-End Projects, Verified Certifications, and Interactive Resume.</span>
+      <a href="#resume" class="announcement-link">Jump to Resume &rarr;</a>
+    </div>
+    <button class="announcement-close" id="closeAnnouncement" aria-label="Dismiss announcement">&times;</button>
+  </aside>
+
+  <!-- Navigation Bar -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#hero" class="brand-logo" aria-label="Lean Morandante Home">
+        <span class="logo-symbol">&lt;LM /&gt;</span>
+        <span class="logo-name">Lean Morandante</span>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="nav-menu" id="navMenu">
+        <ul class="nav-links">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#certifications" class="nav-link">Certifications</a></li>
+          <li><a href="#resume" class="nav-link">Resume</a></li>
+          <li><a href="#references" class="nav-link">References</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Action items -->
+      <div class="nav-actions">
+        <!-- Theme Toggle -->
+        <button class="theme-toggle-btn" id="themeToggle" aria-label="Toggle Dark and Light Mode" title="Toggle Theme">
+          <span class="theme-icon light-icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          </span>
+          <span class="theme-icon dark-icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </span>
+        </button>
+
+        <!-- Resume CTA button in header -->
+        <a href="#resume" class="btn btn-outline-sm d-none-mobile">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          Resume
+        </a>
+
+        <!-- Let's Talk CTA button in header -->
+        <a href="#contact" class="btn btn-primary-sm d-none-mobile">Let's Talk</a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Navigation -->
+    <div class="mobile-drawer" id="mobileDrawer">
+      <ul class="mobile-nav-links">
+        <li><a href="#about" class="mobile-link">About Me</a></li>
+        <li><a href="#skills" class="mobile-link">Skills & Stack</a></li>
+        <li><a href="#experience" class="mobile-link">Work Experience</a></li>
+        <li><a href="#projects" class="mobile-link">Featured Projects</a></li>
+        <li><a href="#certifications" class="mobile-link">Certifications</a></li>
+        <li><a href="#resume" class="mobile-link">Resume & CV</a></li>
+        <li><a href="#references" class="mobile-link">References</a></li>
+        <li><a href="#contact" class="mobile-link">Contact</a></li>
+      </ul>
+      <div class="mobile-drawer-actions">
+        <a href="assets/Lean_Morandante_Resume.pdf" download class="btn btn-primary btn-block">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Download PDF Resume
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <!-- Availability Pill -->
+          <div class="hero-badge-wrapper">
+            <span class="status-pill">
+              <span class="status-dot"></span>
+              Available for Front-End Roles &amp; Projects
+            </span>
+          </div>
+
+          <h1 class="hero-title">
+            Hi, I'm <span class="gradient-text">Lean Morandante</span>
+          </h1>
+
+          <div class="hero-role-wrapper">
+            <span class="role-prefix">I am a </span>
+            <span class="typing-text" id="typingText">Front-End Web Developer</span>
+            <span class="cursor" aria-hidden="true">|</span>
+          </div>
+
+          <p class="hero-description">
+            Front-End Web Developer with <strong>2+ years of hands-on experience</strong> building responsive, accessible, high-converting websites using <strong>HTML5, CSS3, and JavaScript</strong>. Graduated <strong>Cum Laude</strong> in Information Technology from <em>Caraga State University</em>. Passionate about pixel-perfect UI execution and proven performance optimization that slashed page load times by <strong>30%</strong>.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#projects" class="btn btn-primary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              View My Work
+            </a>
+            <a href="#resume" class="btn btn-secondary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              Resume &amp; CV
+            </a>
+            <a href="#certifications" class="btn btn-outline">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+              Certificates
+            </a>
+          </div>
+
+          <!-- Quick Social & Contact Bar -->
+          <div class="hero-social-strip">
+            <span class="social-label">Quick Connect:</span>
+            <a href="mailto:morandantelean@gmail.com" class="social-chip" title="Email Lean">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              morandantelean@gmail.com
+            </a>
+            <a href="https://www.facebook.com/lean.morandante.52#" target="_blank" rel="noopener noreferrer" class="social-chip" title="Facebook Profile">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+              Facebook
+            </a>
+            <span class="location-chip" title="Location">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Placer, Surigao Del Norte
+            </span>
+          </div>
+        </div>
+
+        <!-- Hero Visual Profile Card -->
+        <div class="hero-visual">
+          <div class="profile-card-wrapper">
+            <div class="profile-card-glow"></div>
+            <div class="profile-card">
+              <div class="profile-avatar-container">
+                <img src="assets/lean_profile.jpg" alt="Lean Morandante - Front-End Web Developer" class="profile-img" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=500&auto=format&fit=crop&q=80'">
+                <div class="avatar-ring"></div>
+              </div>
+              <div class="profile-info-strip">
+                <h3 class="profile-name">Lean Morandante</h3>
+                <p class="profile-role">Front-End Web Developer</p>
+                <div class="profile-badge-honor">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  Cum Laude &bull; Caraga State University
+                </div>
+              </div>
+
+              <!-- Floating Micro Badges -->
+              <div class="floating-badge badge-speed" title="Performance Metric">
+                <span class="badge-icon">⚡</span>
+                <span class="badge-text"><strong>+30%</strong> Faster Load Speed</span>
+              </div>
+              <div class="floating-badge badge-code" title="Core Stack">
+                <span class="badge-icon">💻</span>
+                <span class="badge-text">HTML5 &bull; CSS3 &bull; JS</span>
+              </div>
+              <div class="floating-badge badge-exp" title="Proven Track Record">
+                <span class="badge-icon">🚀</span>
+                <span class="badge-text"><strong>2+ Years</strong> Hands-on Exp</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- KEY METRICS BANNER -->
+      <div class="container">
+        <div class="metrics-grid">
+          <div class="metric-card">
+            <div class="metric-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div class="metric-body">
+              <h4 class="metric-number">2+ Years</h4>
+              <p class="metric-label">Industry Experience</p>
+              <span class="metric-sub">Client &amp; Internal Web Projects</span>
+            </div>
+          </div>
+
+          <div class="metric-card">
+            <div class="metric-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            </div>
+            <div class="metric-body">
+              <h4 class="metric-number">30% Speed</h4>
+              <p class="metric-label">Performance Boost</p>
+              <span class="metric-sub">Optimized Core Web Vitals</span>
+            </div>
+          </div>
+
+          <div class="metric-card">
+            <div class="metric-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+            </div>
+            <div class="metric-body">
+              <h4 class="metric-number">Cum Laude</h4>
+              <p class="metric-label">BS Information Technology</p>
+              <span class="metric-sub">Caraga State University</span>
+            </div>
+          </div>
+
+          <div class="metric-card">
+            <div class="metric-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+            </div>
+            <div class="metric-body">
+              <h4 class="metric-number">5+ Certified</h4>
+              <p class="metric-label">Certifications &amp; Bootcamps</p>
+              <span class="metric-sub">Sololearn &bull; freeCodeCamp</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">About Me</span>
+          <h2 class="section-title">Driven by Clean Code &amp; Exceptional Web Experiences</h2>
+          <p class="section-subtitle">Bridging academic excellence with practical, battle-tested front-end web engineering.</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-story-col">
+            <div class="glass-card about-card">
+              <h3 class="card-title">My Journey &amp; Professional Focus</h3>
+              <p class="card-text">
+                I am a front-end web developer with <strong>2 years of hands-on experience</strong> building responsive, accessible, and high-performance websites using <strong>HTML, CSS, and JavaScript</strong>. I graduated <strong>Cum Laude</strong> with a <em>Bachelor of Science in Information Technology</em> from <strong>Caraga State University</strong>, following a foundation in STEM with <strong>Highest Honor</strong> at Bacuag National Agro-Industrial School.
+              </p>
+              <p class="card-text">
+                Throughout my roles at <strong>Local IT Solutions Co.</strong> in Butuan City and <strong>Surigao Bay IT Services</strong> in Surigao City, I have delivered client and internal web applications end-to-end. I specialize in translating complex visual mockups into clean, semantic markup, cross-browser compatible layouts, and optimizing client sites to achieve up to a <strong>30% boost in average page load speed</strong>.
+              </p>
+              <p class="card-text">
+                My passion is crafting intuitive interfaces that feel effortless to users while maintaining strict adherence to web accessibility standards, modular architecture, and lightning-fast loading speeds.
+              </p>
+
+              <!-- Philosophy Highlights -->
+              <div class="philosophy-pills">
+                <span class="philo-pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Semantic HTML5</span>
+                <span class="philo-pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Modern CSS3 &amp; Grid</span>
+                <span class="philo-pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Modern JavaScript</span>
+                <span class="philo-pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> 30% Speed Optimization</span>
+                <span class="philo-pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Cross-Browser Layouts</span>
+                <span class="philo-pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Mobile-First Responsive</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-details-col">
+            <!-- Soft Skills Card -->
+            <div class="glass-card soft-skills-card">
+              <h3 class="card-title">Core Strengths &amp; Soft Skills</h3>
+              <div class="soft-skills-list">
+                <div class="soft-skill-item">
+                  <div class="skill-icon-bubble">🧩</div>
+                  <div>
+                    <h4 class="soft-skill-title">Problem-Solving</h4>
+                    <p class="soft-skill-desc">Analytical mindset debugging complex layout quirks, script errors, and responsive edge cases.</p>
+                  </div>
+                </div>
+
+                <div class="soft-skill-item">
+                  <div class="skill-icon-bubble">⏱️</div>
+                  <div>
+                    <h4 class="soft-skill-title">Time Management &amp; Execution</h4>
+                    <p class="soft-skill-desc">Consistently hitting project milestones and delivering production-ready code on deadline.</p>
+                  </div>
+                </div>
+
+                <div class="soft-skill-item">
+                  <div class="skill-icon-bubble">🤝</div>
+                  <div>
+                    <h4 class="soft-skill-title">Team Collaboration</h4>
+                    <p class="soft-skill-desc">Seamless synergy with UI/UX designers, back-end engineers, QA, and project leads.</p>
+                  </div>
+                </div>
+
+                <div class="soft-skill-item">
+                  <div class="skill-icon-bubble">🎨</div>
+                  <div>
+                    <h4 class="soft-skill-title">Creative UI Implementation</h4>
+                    <p class="soft-skill-desc">Eye for aesthetics, micro-interactions, clean visual hierarchy, and modern typography.</p>
+                  </div>
+                </div>
+
+                <div class="soft-skill-item">
+                  <div class="skill-icon-bubble">👂</div>
+                  <div>
+                    <h4 class="soft-skill-title">Active Listening</h4>
+                    <p class="soft-skill-desc">Carefully translating client specifications and user feedback into precise web solutions.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Languages Card -->
+            <div class="glass-card languages-card">
+              <h3 class="card-title">Languages</h3>
+              <div class="languages-grid">
+                <div class="language-item">
+                  <div class="language-header">
+                    <span class="lang-name">English</span>
+                    <span class="lang-level">Professional &amp; Technical</span>
+                  </div>
+                  <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 95%;"></div></div>
+                </div>
+                <div class="language-item">
+                  <div class="language-header">
+                    <span class="lang-name">Filipino</span>
+                    <span class="lang-level">Native Speaker</span>
+                  </div>
+                  <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 100%;"></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS MATRIX SECTION -->
+    <section class="section skills-section" id="skills">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Technical Competencies</span>
+          <h2 class="section-title">Skills &amp; Front-End Tooling</h2>
+          <p class="section-subtitle">A robust foundation in core web standards, performance optimization, and developer workflows.</p>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Skill Card 1: HTML5 -->
+          <div class="glass-card skill-card">
+            <div class="skill-card-top">
+              <div class="skill-badge-icon html-badge">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              </div>
+              <div class="skill-meta">
+                <h3 class="skill-name">HTML5 Architecture</h3>
+                <span class="skill-level-text">Advanced &bull; Sololearn Certified</span>
+              </div>
+            </div>
+            <p class="skill-description">
+              Writing clean, semantic, SEO-friendly, and accessible markup. Structuring intuitive DOM trees according to WCAG web standards.
+            </p>
+            <ul class="skill-features">
+              <li>Semantic Elements &amp; Landmark Roles</li>
+              <li>Accessibility (ARIA, screen reader optimization)</li>
+              <li>SEO Optimization &amp; OpenGraph Meta</li>
+              <li>Form Validations &amp; Audio/Video Integrations</li>
+            </ul>
+            <div class="skill-meter-wrap">
+              <div class="meter-info"><span>Proficiency</span><span>95%</span></div>
+              <div class="meter-bar"><div class="meter-fill" style="width: 95%;"></div></div>
+            </div>
+          </div>
+
+          <!-- Skill Card 2: CSS3 -->
+          <div class="glass-card skill-card">
+            <div class="skill-card-top">
+              <div class="skill-badge-icon css-badge">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l8 4.5v11L12 22l-8-4.5v-11L12 2z"/></svg>
+              </div>
+              <div class="skill-meta">
+                <h3 class="skill-name">CSS3 &amp; Styling</h3>
+                <span class="skill-level-text">Advanced &bull; Sololearn Certified</span>
+              </div>
+            </div>
+            <p class="skill-description">
+              Crafting responsive, beautiful layouts across all screen resolutions using modern CSS specifications, custom variables, and fluid typography.
+            </p>
+            <ul class="skill-features">
+              <li>CSS Flexbox &amp; 2D CSS Grid Layouts</li>
+              <li>Media Queries &amp; Fluid Mobile-First Design</li>
+              <li>CSS Variables, Theming (Dark/Light Modes)</li>
+              <li>Keyframe Animations &amp; Micro-Interactions</li>
+            </ul>
+            <div class="skill-meter-wrap">
+              <div class="meter-info"><span>Proficiency</span><span>92%</span></div>
+              <div class="meter-bar"><div class="meter-fill" style="width: 92%;"></div></div>
+            </div>
+          </div>
+
+          <!-- Skill Card 3: JavaScript -->
+          <div class="glass-card skill-card">
+            <div class="skill-card-top">
+              <div class="skill-badge-icon js-badge">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 18l6-6-6-6"/><path d="M8 6l-6 6 6 6"/></svg>
+              </div>
+              <div class="skill-meta">
+                <h3 class="skill-name">JavaScript (ES6+)</h3>
+                <span class="skill-level-text">Proficient &bull; freeCodeCamp Certified</span>
+              </div>
+            </div>
+            <p class="skill-description">
+              Writing clean, modular, and dynamic client-side JavaScript. Experienced in DOM manipulation, asynchronous programming, and interactive UI logic.
+            </p>
+            <ul class="skill-features">
+              <li>DOM Manipulation &amp; Event-Driven Architecture</li>
+              <li>ES6+ Syntax (Arrow Functions, Destructuring, Modules)</li>
+              <li>Fetch API, RESTful Integration, JSON handling</li>
+              <li>Algorithms &amp; Data Structures (freeCodeCamp)</li>
+            </ul>
+            <div class="skill-meter-wrap">
+              <div class="meter-info"><span>Proficiency</span><span>88%</span></div>
+              <div class="meter-bar"><div class="meter-fill" style="width: 88%;"></div></div>
+            </div>
+          </div>
+
+          <!-- Skill Card 4: Performance & Optimization -->
+          <div class="glass-card skill-card">
+            <div class="skill-card-top">
+              <div class="skill-badge-icon perf-badge">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+              </div>
+              <div class="skill-meta">
+                <h3 class="skill-name">Speed &amp; Optimization</h3>
+                <span class="skill-level-text">Core Competency &bull; +30% Proven Boost</span>
+              </div>
+            </div>
+            <p class="skill-description">
+              Proven track record in diagnosing bottlenecks and dramatically improving Core Web Vitals (FCP, LCP, CLS) for client portals and landing pages.
+            </p>
+            <ul class="skill-features">
+              <li>Minification, Critical CSS &amp; Asset Bundling</li>
+              <li>Image Compression &amp; Native Lazy Loading</li>
+              <li>Chrome DevTools Profiling &amp; Lighthouse Auditing</li>
+              <li>Eliminating Render-Blocking Resources</li>
+            </ul>
+            <div class="skill-meter-wrap">
+              <div class="meter-info"><span>Proficiency</span><span>90%</span></div>
+              <div class="meter-bar"><div class="meter-fill" style="width: 90%;"></div></div>
+            </div>
+          </div>
+
+          <!-- Skill Card 5: Responsive & Cross-Browser -->
+          <div class="glass-card skill-card">
+            <div class="skill-card-top">
+              <div class="skill-badge-icon cross-badge">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+              </div>
+              <div class="skill-meta">
+                <h3 class="skill-name">Responsive Design</h3>
+                <span class="skill-level-text">Expert &bull; freeCodeCamp Certified</span>
+              </div>
+            </div>
+            <p class="skill-description">
+              Pixel-perfect translation of designer mockups (Figma, XD) into fluid interfaces that work seamlessly across mobile phones, tablets, and desktops.
+            </p>
+            <ul class="skill-features">
+              <li>Cross-Browser Compatibility (Chrome, Firefox, Safari, Edge)</li>
+              <li>Mobile-First Responsive Breakpoints</li>
+              <li>Touch Targets &amp; Mobile UX Standards</li>
+              <li>Fluid Typography &amp; Relative Layout Units</li>
+            </ul>
+            <div class="skill-meter-wrap">
+              <div class="meter-info"><span>Proficiency</span><span>94%</span></div>
+              <div class="meter-bar"><div class="meter-fill" style="width: 94%;"></div></div>
+            </div>
+          </div>
+
+          <!-- Skill Card 6: Workflow & Developer Tools -->
+          <div class="glass-card skill-card">
+            <div class="skill-card-top">
+              <div class="skill-badge-icon tools-badge">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+              </div>
+              <div class="skill-meta">
+                <h3 class="skill-name">Developer Workflow</h3>
+                <span class="skill-level-text">Daily Stack &bull; Team Ready</span>
+              </div>
+            </div>
+            <p class="skill-description">
+              Disciplined development habits with version control, collaboration with back-end engineers, and rigorous testing across environments.
+            </p>
+            <ul class="skill-features">
+              <li>Git &amp; GitHub Version Control</li>
+              <li>VS Code &amp; Web Developer Extensions</li>
+              <li>Translating Figma / Mockups to Code</li>
+              <li>Debugging &amp; Console Diagnostics</li>
+            </ul>
+            <div class="skill-meter-wrap">
+              <div class="meter-info"><span>Proficiency</span><span>89%</span></div>
+              <div class="meter-bar"><div class="meter-fill" style="width: 89%;"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORK EXPERIENCE TIMELINE -->
+    <section class="section experience-section" id="experience">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Career History</span>
+          <h2 class="section-title">Work Experience</h2>
+          <p class="section-subtitle">2 years of professional contributions delivering real client websites and internal systems.</p>
+        </div>
+
+        <div class="timeline-wrapper">
+          <!-- Timeline Item 1 -->
+          <div class="timeline-item">
+            <div class="timeline-marker">
+              <span class="marker-dot"></span>
+            </div>
+            <div class="timeline-content glass-card">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="timeline-role">Front-End Web Developer</h3>
+                  <h4 class="timeline-company">Local IT Solutions Co. &bull; Butuan City, Caraga</h4>
+                </div>
+                <div class="timeline-date-badge">2025 – 2026</div>
+              </div>
+              <div class="timeline-body">
+                <ul class="timeline-achievements">
+                  <li>
+                    <svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                    <strong>Client Website Delivery:</strong> Built and maintained responsive, cross-browser client websites utilizing semantic HTML, modern CSS, and vanilla JavaScript.
+                  </li>
+                  <li>
+                    <svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                    <strong>30% Page Load Speed Boost:</strong> Analyzed performance bottlenecks, optimized media assets, and refactored front-end scripts, improving average page load speed by <strong>30%</strong>.
+                  </li>
+                  <li>
+                    <svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                    <strong>Cross-Functional Collaboration:</strong> Partnered closely with UI/UX designers and back-end developers to integrate RESTful endpoints and ensure cohesive user experiences.
+                  </li>
+                </ul>
+                <div class="tech-tag-group">
+                  <span class="tech-tag">HTML5</span>
+                  <span class="tech-tag">CSS3</span>
+                  <span class="tech-tag">JavaScript (ES6+)</span>
+                  <span class="tech-tag">Web Performance (+30%)</span>
+                  <span class="tech-tag">Responsive Design</span>
+                  <span class="tech-tag">REST API Integration</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline Item 2 -->
+          <div class="timeline-item">
+            <div class="timeline-marker">
+              <span class="marker-dot"></span>
+            </div>
+            <div class="timeline-content glass-card">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="timeline-role">Front-End Developer</h3>
+                  <h4 class="timeline-company">Surigao Bay IT Services &bull; Surigao City, Caraga</h4>
+                </div>
+                <div class="timeline-date-badge">2024 – 2025</div>
+              </div>
+              <div class="timeline-body">
+                <ul class="timeline-achievements">
+                  <li>
+                    <svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                    <strong>Landing Pages &amp; Internal Tools:</strong> Developed and maintained dynamic landing pages and internal operational web tools using HTML, CSS, and JavaScript.
+                  </li>
+                  <li>
+                    <svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                    <strong>Design Mockup Translation:</strong> Worked closely with the creative design team to translate high-fidelity wireframes and mockups into responsive, cross-browser layouts.
+                  </li>
+                  <li>
+                    <svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                    <strong>Cross-Browser QA:</strong> Conducted browser compatibility testing to guarantee uniform rendering across desktop and mobile devices.
+                  </li>
+                </ul>
+                <div class="tech-tag-group">
+                  <span class="tech-tag">HTML5</span>
+                  <span class="tech-tag">CSS3</span>
+                  <span class="tech-tag">JavaScript</span>
+                  <span class="tech-tag">UI/UX Translation</span>
+                  <span class="tech-tag">Cross-Browser Testing</span>
+                  <span class="tech-tag">Internal Tools</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION SECTION -->
+    <section class="section education-section" id="education">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Academic Background</span>
+          <h2 class="section-title">Education &amp; Academic Honors</h2>
+          <p class="section-subtitle">Academic dedication reflected in top Latin and High School graduation honors.</p>
+        </div>
+
+        <div class="education-grid">
+          <!-- College Card -->
+          <div class="glass-card education-card featured-edu">
+            <div class="edu-honor-banner">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              Graduated Cum Laude
+            </div>
+            <div class="edu-body">
+              <div class="edu-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+              </div>
+              <h3 class="edu-institution">Caraga State University</h3>
+              <h4 class="edu-degree">Bachelor of Science in Information Technology</h4>
+              <p class="edu-timeline">Graduation Year: 2020 &bull; Butuan City, Caraga</p>
+              <p class="edu-desc">
+                Specialized in modern web technologies, software development, data structures, and human-computer interaction. Graduated with academic distinction (<strong>Cum Laude</strong>).
+              </p>
+            </div>
+          </div>
+
+          <!-- High School Card -->
+          <div class="glass-card education-card">
+            <div class="edu-honor-banner silver-banner">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              With Highest Honor
+            </div>
+            <div class="edu-body">
+              <div class="edu-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+              </div>
+              <h3 class="edu-institution">Bacuag National Agro-Industrial School</h3>
+              <h4 class="edu-degree">Science, Technology, Engineering, and Mathematics (STEM)</h4>
+              <p class="edu-timeline">2014 – 2020 &bull; Bacuag, Surigao Del Norte</p>
+              <p class="edu-desc">
+                Rigorous training in mathematics, computational logic, and science. Completed secondary education achieving the prestigious <strong>With Highest Honor</strong> citation.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE PROJECTS & LIVE DEMOS -->
+    <section class="section projects-section" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Interactive Demos</span>
+          <h2 class="section-title">Featured Projects &amp; Capabilities</h2>
+          <p class="section-subtitle">Real-world applications showcasing front-end engineering, speed optimization, and responsive design.</p>
+        </div>
+
+        <div class="projects-list">
+          <!-- PROJECT 1: 30% Page Speed Optimizer Case Study & Interactive Simulator -->
+          <div class="glass-card project-card featured-project">
+            <div class="project-header">
+              <div class="project-title-area">
+                <span class="project-category">Performance Engineering &bull; Interactive Simulator</span>
+                <h3 class="project-title">Web Performance &amp; Core Web Vitals Optimizer</h3>
+              </div>
+              <div class="project-links">
+                <span class="badge-pill-success">+30% Proven Speedup</span>
+              </div>
+            </div>
+
+            <p class="project-summary">
+              An interactive demonstration of the exact performance optimization techniques Lean implemented at <strong>Local IT Solutions Co.</strong> to improve average page load times by <strong>30%</strong>. Test the interactive toggle below to see how minification, critical CSS extraction, image lazy-loading, and eliminating render-blocking scripts transform user experience.
+            </p>
+
+            <!-- Interactive Speed Simulator Widget -->
+            <div class="simulator-box" id="speedSimulator">
+              <div class="simulator-controls">
+                <span class="sim-label">Simulation State:</span>
+                <div class="sim-toggle-group">
+                  <button class="sim-btn" id="btnBeforeOpt">Before Optimization</button>
+                  <button class="sim-btn active" id="btnAfterOpt">After Optimization (Lean's Work)</button>
+                </div>
+              </div>
+
+              <div class="sim-display-grid">
+                <!-- Score Circle -->
+                <div class="sim-score-card">
+                  <div class="score-circle" id="scoreCircle">
+                    <span class="score-number" id="scoreValue">98</span>
+                    <span class="score-sub">Lighthouse</span>
+                  </div>
+                  <span class="score-status" id="scoreStatus">Performance: Excellent</span>
+                </div>
+
+                <!-- Metrics breakdown -->
+                <div class="sim-metrics-bars">
+                  <div class="sim-metric-row">
+                    <span class="metric-name">Page Load Time</span>
+                    <div class="sim-bar-track">
+                      <div class="sim-bar-fill fill-green" id="barLoadTime" style="width: 25%;"></div>
+                    </div>
+                    <span class="metric-val" id="valLoadTime">0.85s (was 2.80s)</span>
+                  </div>
+
+                  <div class="sim-metric-row">
+                    <span class="metric-name">First Contentful Paint (FCP)</span>
+                    <div class="sim-bar-track">
+                      <div class="sim-bar-fill fill-green" id="barFCP" style="width: 20%;"></div>
+                    </div>
+                    <span class="metric-val" id="valFCP">0.4s</span>
+                  </div>
+
+                  <div class="sim-metric-row">
+                    <span class="metric-name">Largest Contentful Paint (LCP)</span>
+                    <div class="sim-bar-track">
+                      <div class="sim-bar-fill fill-green" id="barLCP" style="width: 30%;"></div>
+                    </div>
+                    <span class="metric-val" id="valLCP">0.9s</span>
+                  </div>
+
+                  <div class="sim-metric-row">
+                    <span class="metric-name">Total Asset Payload</span>
+                    <div class="sim-bar-track">
+                      <div class="sim-bar-fill fill-green" id="barPayload" style="width: 28%;"></div>
+                    </div>
+                    <span class="metric-val" id="valPayload">380 KB (was 1.8 MB)</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="sim-checklist" id="simChecklist">
+                <div class="check-item checked">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Critical CSS extracted inline; unblocking initial render</span>
+                </div>
+                <div class="check-item checked">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Modern image formats (WebP/AVIF) with native lazy-loading</span>
+                </div>
+                <div class="check-item checked">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Minified HTML, CSS &amp; JavaScript payloads</span>
+                </div>
+                <div class="check-item checked">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Eliminated layout shifts (CLS &lt; 0.01)</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-tags">
+              <span class="tech-tag">Web Vitals</span>
+              <span class="tech-tag">Performance Tuning</span>
+              <span class="tech-tag">Lighthouse 98</span>
+              <span class="tech-tag">Lazy Loading</span>
+              <span class="tech-tag">Asset Minification</span>
+            </div>
+          </div>
+
+          <!-- PROJECT 2: Responsive Landing Page & Viewport Switcher -->
+          <div class="glass-card project-card">
+            <div class="project-header">
+              <div class="project-title-area">
+                <span class="project-category">Cross-Browser &bull; Responsive Design</span>
+                <h3 class="project-title">PixelCraft: Responsive SaaS Landing Page Engine</h3>
+              </div>
+              <div class="viewport-switcher-btns">
+                <button class="vp-btn active" data-vp="desktop" title="Desktop View (100%)">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                  Desktop
+                </button>
+                <button class="vp-btn" data-vp="tablet" title="Tablet View (768px)">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+                  Tablet
+                </button>
+                <button class="vp-btn" data-vp="mobile" title="Mobile View (375px)">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+                  Mobile
+                </button>
+              </div>
+            </div>
+
+            <p class="project-summary">
+              A responsive layout engine built to show how designer mockups from Surigao Bay IT Services were translated into pixel-perfect layouts. Switch between Desktop, Tablet, and Mobile to see CSS Grid and Flexbox dynamically adapt.
+            </p>
+
+            <div class="viewport-preview-frame desktop-mode" id="viewportPreview">
+              <div class="mock-browser-bar">
+                <div class="mock-dots">
+                  <span class="mock-dot red"></span>
+                  <span class="mock-dot yellow"></span>
+                  <span class="mock-dot green"></span>
+                </div>
+                <div class="mock-address-bar">https://client-portal.localit.caraga/preview</div>
+              </div>
+
+              <div class="mock-site-content">
+                <div class="mock-hero">
+                  <span class="mock-badge">Enterprise Ready</span>
+                  <h4 class="mock-title">Modern Digital Solutions Built for Speed</h4>
+                  <p class="mock-desc">Deliver exceptional customer experiences with scalable web platforms built with HTML5 &amp; CSS3.</p>
+                  <div class="mock-buttons">
+                    <span class="mock-btn primary">Explore Services</span>
+                    <span class="mock-btn secondary">Contact Team</span>
+                  </div>
+                </div>
+
+                <div class="mock-cards-row">
+                  <div class="mock-card">
+                    <span class="mock-card-icon">⚡</span>
+                    <h5>Lightning Fast</h5>
+                    <p>Optimized for sub-second load times.</p>
+                  </div>
+                  <div class="mock-card">
+                    <span class="mock-card-icon">📱</span>
+                    <h5>100% Responsive</h5>
+                    <p>Fluid across every screen size.</p>
+                  </div>
+                  <div class="mock-card">
+                    <span class="mock-card-icon">🔒</span>
+                    <h5>Cross-Browser</h5>
+                    <p>Tested on Safari, Chrome, Firefox &amp; Edge.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-tags">
+              <span class="tech-tag">CSS Grid</span>
+              <span class="tech-tag">Flexbox</span>
+              <span class="tech-tag">Media Queries</span>
+              <span class="tech-tag">Mobile-First</span>
+              <span class="tech-tag">Figma Translation</span>
+            </div>
+          </div>
+
+          <!-- PROJECT 3: JavaScript Algorithms & Interactive Data Visualizer -->
+          <div class="glass-card project-card">
+            <div class="project-header">
+              <div class="project-title-area">
+                <span class="project-category">Vanilla JavaScript &bull; Algorithmic State</span>
+                <h3 class="project-title">Algorithmic Data Tool &amp; Live Search Filter</h3>
+              </div>
+              <span class="badge-pill-accent">freeCodeCamp Certified</span>
+            </div>
+
+            <p class="project-summary">
+              Demonstrating core JavaScript algorithm mastery (data structures, filtering, mapping, dynamic DOM updates). Try searching or filtering the client records in real time:
+            </p>
+
+            <!-- Interactive JS Mini-App -->
+            <div class="js-app-box">
+              <div class="js-app-controls">
+                <div class="search-input-wrap">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                  <input type="text" id="toolSearchInput" placeholder="Filter projects, tech (e.g. HTML, 30%, speed)..." aria-label="Search items">
+                </div>
+                <div class="filter-chips" id="filterChips">
+                  <button class="chip active" data-filter="all">All (5)</button>
+                  <button class="chip" data-filter="client">Client Websites</button>
+                  <button class="chip" data-filter="internal">Internal Tools</button>
+                  <button class="chip" data-filter="performance">Performance</button>
+                </div>
+              </div>
+
+              <div class="js-results-grid" id="jsResultsGrid">
+                <!-- Dynamically populated by script.js -->
+              </div>
+            </div>
+
+            <div class="project-tags">
+              <span class="tech-tag">ES6+ JavaScript</span>
+              <span class="tech-tag">DOM Manipulation</span>
+              <span class="tech-tag">Algorithms</span>
+              <span class="tech-tag">Dynamic Filtering</span>
+              <span class="tech-tag">Event Listeners</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATIONS SECTION -->
+    <section class="section cert-section" id="certifications">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Credentials &amp; Verification</span>
+          <h2 class="section-title">Certifications &amp; Trainings</h2>
+          <p class="section-subtitle">Formal credentials validating front-end design, JavaScript algorithms, and web technologies. Click any certificate to inspect full resolution.</p>
+          
+          <!-- Certificate Filter Chips -->
+          <div class="cert-filter-chips" id="certFilterChips">
+            <button class="cert-chip active" data-cert-filter="all">All Credentials (5)</button>
+            <button class="cert-chip" data-cert-filter="sololearn">Sololearn (2)</button>
+            <button class="cert-chip" data-cert-filter="fcc">freeCodeCamp (2)</button>
+            <button class="cert-chip" data-cert-filter="univ">University (1)</button>
+          </div>
+        </div>
+
+        <div class="cert-grid" id="certGrid">
+          <!-- Cert 1: Sololearn CSS -->
+          <div class="glass-card cert-card featured-cert" data-cert-category="sololearn">
+            <div class="cert-image-preview" onclick="openCertModal('assets/certificate_css.jpg', 'Introduction to CSS', 'Sololearn', 'CC-UP4X9RBC', '30 November, 2025', 'Demonstrating theoretical and practical understanding of modern CSS styling, cascading rules, flexbox, box model, and layout techniques.')">
+              <img src="assets/certificate_css.jpg" alt="Sololearn Introduction to CSS Certificate - Lean Morandante" loading="lazy">
+              <div class="cert-hover-overlay">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                <span>Click to View Certificate</span>
+              </div>
+            </div>
+            <div class="cert-body">
+              <div class="cert-badge-row">
+                <span class="cert-badge-sololearn">Sololearn Certified</span>
+                <span class="cert-date">Nov 30, 2025</span>
+              </div>
+              <h3 class="cert-title">Introduction to CSS</h3>
+              <p class="cert-id-tag">Credential ID: <code>CC-UP4X9RBC</code></p>
+              <p class="cert-desc">
+                Certified practical and theoretical understanding of CSS layout modeling, color theory, responsive rules, typography, and styling architectures.
+              </p>
+              <div class="cert-actions">
+                <button class="btn btn-sm btn-primary" onclick="openCertModal('assets/certificate_css.jpg', 'Introduction to CSS', 'Sololearn', 'CC-UP4X9RBC', '30 November, 2025', 'Demonstrating theoretical and practical understanding of modern CSS styling, cascading rules, flexbox, box model, and layout techniques.')">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                  View Certificate
+                </button>
+                <a href="assets/certificate_css.jpg" download="Lean_Morandante_Sololearn_CSS_Certificate.jpg" class="btn btn-sm btn-outline">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                  Download
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cert 2: Sololearn HTML -->
+          <div class="glass-card cert-card featured-cert" data-cert-category="sololearn">
+            <div class="cert-image-preview" onclick="openCertModal('assets/certificate_html.jpg', 'Introduction to HTML', 'Sololearn', 'CC-S9DMGBKB', '22 November, 2025', 'Demonstrating theoretical and practical understanding of HTML5 semantics, document structure, multimedia elements, accessibility, and forms.')">
+              <img src="assets/certificate_html.jpg" alt="Sololearn Introduction to HTML Certificate - Lean Morandante" loading="lazy">
+              <div class="cert-hover-overlay">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                <span>Click to View Certificate</span>
+              </div>
+            </div>
+            <div class="cert-body">
+              <div class="cert-badge-row">
+                <span class="cert-badge-sololearn">Sololearn Certified</span>
+                <span class="cert-date">Nov 22, 2025</span>
+              </div>
+              <h3 class="cert-title">Introduction to HTML</h3>
+              <p class="cert-id-tag">Credential ID: <code>CC-S9DMGBKB</code></p>
+              <p class="cert-desc">
+                Certified practical and theoretical understanding of HTML5 markup standards, modern semantic tags, audio/video elements, tables, forms, and accessibility.
+              </p>
+              <div class="cert-actions">
+                <button class="btn btn-sm btn-primary" onclick="openCertModal('assets/certificate_html.jpg', 'Introduction to HTML', 'Sololearn', 'CC-S9DMGBKB', '22 November, 2025', 'Demonstrating theoretical and practical understanding of HTML5 semantics, document structure, multimedia elements, accessibility, and forms.')">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                  View Certificate
+                </button>
+                <a href="assets/certificate_html.jpg" download="Lean_Morandante_Sololearn_HTML_Certificate.jpg" class="btn btn-sm btn-outline">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                  Download
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cert 3: freeCodeCamp Responsive Web Design -->
+          <div class="glass-card cert-card" data-cert-category="fcc">
+            <div class="cert-badge-row">
+              <span class="cert-badge-fcc">freeCodeCamp</span>
+              <span class="cert-date">2025</span>
+            </div>
+            <h3 class="cert-title">Responsive Web Design</h3>
+            <p class="cert-id-tag">Curriculum: 300 Hours Web Development</p>
+            <p class="cert-desc">
+              Extensive hands-on mastery in HTML5, CSS3, modern Flexbox, CSS Grid layouts, media queries, accessibility standards, and responsive web development principles.
+            </p>
+            <div class="cert-tags-row">
+              <span class="tech-tag">HTML5</span>
+              <span class="tech-tag">CSS Flexbox</span>
+              <span class="tech-tag">CSS Grid</span>
+              <span class="tech-tag">Accessibility</span>
+            </div>
+          </div>
+
+          <!-- Cert 4: freeCodeCamp JavaScript Algorithms -->
+          <div class="glass-card cert-card" data-cert-category="fcc">
+            <div class="cert-badge-row">
+              <span class="cert-badge-fcc">freeCodeCamp</span>
+              <span class="cert-date">2024</span>
+            </div>
+            <h3 class="cert-title">JavaScript Algorithms &amp; Data Structures</h3>
+            <p class="cert-id-tag">Curriculum: 300 Hours Computational JavaScript</p>
+            <p class="cert-desc">
+              Comprehensive curriculum covering ES6+, Object-Oriented Programming (OOP), Functional Programming, recursion, algorithmic problem-solving, and data structures.
+            </p>
+            <div class="cert-tags-row">
+              <span class="tech-tag">JavaScript ES6</span>
+              <span class="tech-tag">Algorithms</span>
+              <span class="tech-tag">Data Structures</span>
+              <span class="tech-tag">OOP &amp; FP</span>
+            </div>
+          </div>
+
+          <!-- Cert 5: Front-End Bootcamp Seminar -->
+          <div class="glass-card cert-card" data-cert-category="univ">
+            <div class="cert-badge-row">
+              <span class="cert-badge-univ">Caraga State University</span>
+              <span class="cert-date">2023</span>
+            </div>
+            <h3 class="cert-title">Front-End Web Development Bootcamp</h3>
+            <p class="cert-id-tag">University Intensive Seminar</p>
+            <p class="cert-desc">
+              Specialized university seminar and hands-on bootcamp focusing on industry front-end development workflows, cross-browser compatibility, and client deliverables.
+            </p>
+            <div class="cert-tags-row">
+              <span class="tech-tag">Web Workflows</span>
+              <span class="tech-tag">UI Implementation</span>
+              <span class="tech-tag">Team Collaboration</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESUME & CV SECTION (CENTERPIECE) -->
+    <section class="section resume-section" id="resume">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Curriculum Vitae</span>
+          <h2 class="section-title">Resume &amp; Professional Profile</h2>
+          <p class="section-subtitle">Explore the interactive digital resume or download the official PDF file directly.</p>
+        </div>
+
+        <!-- Action Toolbar for Resume -->
+        <div class="resume-toolbar glass-card">
+          <div class="resume-toolbar-left">
+            <span class="doc-icon">📄</span>
+            <div class="doc-meta">
+              <strong>Lean_Morandante_Resume.pdf</strong>
+              <span class="doc-sub">Front-End Web Developer &bull; Cum Laude IT &bull; 123 KB</span>
+            </div>
+          </div>
+
+          <!-- In-Page Resume View Switcher Tabs -->
+          <div class="resume-tabs-nav" id="resumeTabsNav">
+            <button class="res-tab-btn active" data-res-target="resumeViewDigital">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+              Digital Resume
+            </button>
+            <button class="res-tab-btn" data-res-target="resumeViewPdf">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="18" rx="2"/><line x1="2" y1="9" x2="22" y2="9"/></svg>
+              Live PDF Viewer
+            </button>
+            <button class="res-tab-btn" data-res-target="resumeViewLetter">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              Cover Letter
+            </button>
+          </div>
+
+          <div class="resume-toolbar-actions">
+            <!-- Download PDF Button -->
+            <a href="assets/Lean_Morandante_Resume.pdf" download="Lean_Morandante_Resume.pdf" class="btn btn-primary btn-sm" title="Download Official PDF Resume">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Download PDF
+            </a>
+            <!-- View PDF in Lightbox Modal -->
+            <button class="btn btn-secondary btn-sm" onclick="openPdfModal()" title="View PDF Fullscreen">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+              Fullscreen
+            </button>
+            <!-- Print Resume Button -->
+            <button class="btn btn-outline btn-sm" onclick="window.print()" title="Print Resume">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+              Print
+            </button>
+          </div>
+        </div>
+
+        <!-- TAB 1: High-Fidelity Printable & Responsive Digital Resume Layout -->
+        <div class="digital-resume-container resume-tab-pane active" id="resumeViewDigital">
+          <div class="resume-sheet">
+            <!-- Resume Header -->
+            <header class="resume-header-row">
+              <div class="resume-header-left">
+                <h1 class="resume-name">LEAN MORANDANTE</h1>
+                <h2 class="resume-role">FRONT-END WEB DEVELOPER</h2>
+                <p class="resume-summary">
+                  Front-end web developer with 2 years of hands-on experience building responsive, accessible websites using HTML, CSS, and JavaScript. Graduated <strong>Cum Laude</strong> in Information Technology and has since delivered client and internal web projects end to end. Passionate about clean web design and looking to grow further in a front-end web development role.
+                </p>
+              </div>
+              <div class="resume-header-right">
+                <div class="resume-contact-block">
+                  <div class="resume-contact-item">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    <span>morandantelean@gmail.com</span>
+                  </div>
+                  <div class="resume-contact-item">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    <span>Placer, Surigao Del Norte</span>
+                  </div>
+                  <div class="resume-contact-item">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                    <a href="https://www.facebook.com/lean.morandante.52#" target="_blank" rel="noopener noreferrer">facebook.com/lean.morandante.52#</a>
+                  </div>
+                </div>
+              </div>
+            </header>
+
+            <div class="resume-content-grid">
+              <!-- Left Column: Experience & Education -->
+              <div class="resume-main-col">
+                <!-- Work Experience -->
+                <section class="resume-section-block">
+                  <h3 class="resume-section-heading">WORK EXPERIENCE</h3>
+
+                  <div class="resume-exp-entry">
+                    <div class="resume-exp-header">
+                      <div class="role-company">
+                        <strong class="title">Front-End Web Developer</strong>
+                        <span class="company">Local IT Solutions Co., Butuan City, Caraga</span>
+                      </div>
+                      <span class="period">2025 – 2026</span>
+                    </div>
+                    <ul class="bullet-list">
+                      <li>Built and maintain responsive client websites using HTML, CSS, and JavaScript.</li>
+                      <li>Collaborated with designers and back-end developers on end-to-end features.</li>
+                      <li>Improved average page load speed by <strong>30%</strong> through asset optimization and DOM efficiency.</li>
+                    </ul>
+                  </div>
+
+                  <div class="resume-exp-entry">
+                    <div class="resume-exp-header">
+                      <div class="role-company">
+                        <strong class="title">Front-End Developer</strong>
+                        <span class="company">Surigao Bay IT Services, Surigao City, Caraga</span>
+                      </div>
+                      <span class="period">2024 – 2025</span>
+                    </div>
+                    <ul class="bullet-list">
+                      <li>Developed and maintained landing pages and internal web tools using HTML, CSS, and JavaScript.</li>
+                      <li>Worked closely with the design team to translate mockups into responsive, cross-browser layouts.</li>
+                    </ul>
+                  </div>
+                </section>
+
+                <!-- Education -->
+                <section class="resume-section-block">
+                  <h3 class="resume-section-heading">EDUCATION</h3>
+
+                  <div class="resume-edu-entry">
+                    <div class="resume-exp-header">
+                      <div class="role-company">
+                        <strong class="title">Caraga State University</strong>
+                        <span class="company">Bachelor of Science in Information Technology</span>
+                      </div>
+                      <span class="period">2020</span>
+                    </div>
+                    <span class="honor-badge">Cum Laude</span>
+                  </div>
+
+                  <div class="resume-edu-entry">
+                    <div class="resume-exp-header">
+                      <div class="role-company">
+                        <strong class="title">Bacuag National Agro-Industrial School</strong>
+                        <span class="company">Science, Technology, Engineering, and Mathematics (STEM)</span>
+                      </div>
+                      <span class="period">2014 – 2020</span>
+                    </div>
+                    <span class="honor-badge">With Highest Honor</span>
+                  </div>
+                </section>
+              </div>
+
+              <!-- Right Column: Skills, Certifications, Character References -->
+              <div class="resume-side-col">
+                <!-- Technical Skills -->
+                <section class="resume-section-block">
+                  <h3 class="resume-section-heading">TECHNICAL SKILLS</h3>
+                  <div class="resume-pill-list">
+                    <span class="res-pill">HTML</span>
+                    <span class="res-pill">CSS</span>
+                    <span class="res-pill">JavaScript</span>
+                    <span class="res-pill">Responsive Design</span>
+                    <span class="res-pill">Speed Optimization</span>
+                    <span class="res-pill">Cross-Browser Layouts</span>
+                  </div>
+                </section>
+
+                <!-- Soft Skills -->
+                <section class="resume-section-block">
+                  <h3 class="resume-section-heading">SOFT SKILLS</h3>
+                  <div class="resume-pill-list">
+                    <span class="res-pill">Problem-Solving</span>
+                    <span class="res-pill">Time Management</span>
+                    <span class="res-pill">Team Collaboration</span>
+                    <span class="res-pill">Creative</span>
+                    <span class="res-pill">Active Listening</span>
+                  </div>
+                </section>
+
+                <!-- Languages -->
+                <section class="resume-section-block">
+                  <h3 class="resume-section-heading">LANGUAGES</h3>
+                  <p class="resume-sub-text">English &bull; Filipino</p>
+                </section>
+
+                <!-- Certifications -->
+                <section class="resume-section-block">
+                  <h3 class="resume-section-heading">CERTIFICATIONS &amp; TRAININGS</h3>
+                  <ul class="cert-compact-list">
+                    <li>
+                      <strong>Responsive Web Design</strong>
+                      <span>— freeCodeCamp (2025)</span>
+                    </li>
+                    <li>
+                      <strong>Introduction to CSS</strong>
+                      <span>— Sololearn (Nov 2025)</span>
+                    </li>
+                    <li>
+                      <strong>Introduction to HTML</strong>
+                      <span>— Sololearn (Nov 2025)</span>
+                    </li>
+                    <li>
+                      <strong>JavaScript Algorithms and Data Structures</strong>
+                      <span>— freeCodeCamp (2024)</span>
+                    </li>
+                    <li>
+                      <strong>Front-End Web Development Bootcamp</strong>
+                      <span>— University Seminar (2023)</span>
+                    </li>
+                  </ul>
+                </section>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB 2: In-Page Live PDF Document Viewer -->
+        <div class="resume-tab-pane" id="resumeViewPdf">
+          <div class="glass-card inpage-pdf-card">
+            <div class="pdf-viewer-header">
+              <div class="pdf-viewer-title">
+                <span class="doc-icon">📑</span>
+                <div>
+                  <strong>Official PDF Resume</strong>
+                  <span class="doc-sub">Interactive preview with scroll, zoom, and print support</span>
+                </div>
+              </div>
+              <div class="pdf-viewer-actions">
+                <a href="assets/Lean_Morandante_Resume.pdf" download="Lean_Morandante_Resume.pdf" class="btn btn-sm btn-primary">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                  Download File
+                </a>
+                <button class="btn btn-sm btn-outline" onclick="openPdfModal()">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+                  Fullscreen
+                </button>
+              </div>
+            </div>
+            <div class="inpage-pdf-embed-wrapper">
+              <iframe src="assets/Lean_Morandante_Resume.pdf#toolbar=1&navpanes=0" class="inpage-pdf-frame" title="Lean Morandante PDF Resume">
+                <p>Your browser does not support embedded PDF viewing. Please <a href="assets/Lean_Morandante_Resume.pdf" download>download the PDF resume here</a>.</p>
+              </iframe>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB 3: Formal Cover Letter View -->
+        <div class="resume-tab-pane" id="resumeViewLetter">
+          <div class="glass-card inpage-letter-card">
+            <div class="letter-sheet inpage-letter-sheet">
+              <div class="letter-meta-header">
+                <p class="letter-date">October 2, 2026</p>
+                <div class="recipient-info">
+                  <strong>Miguel Fermin</strong><br>
+                  Chief Technology Officer (CTO)<br>
+                  White Cloak Technologies, Inc.<br>
+                  Ortigas Center, Pasig City, Metro Manila, 1605
+                </div>
+              </div>
+
+              <div class="letter-salutation">Dear Mr. Fermin:</div>
+
+              <div class="letter-body-content">
+                <p>
+                  I am writing to express my interest in applying for the <strong>Front-End Web Developer</strong> position at <strong>White Cloak Technologies, Inc.</strong> I learned about this opportunity through your official hiring channels. As an IT graduate (<strong>Cum Laude</strong>) from <strong>Caraga State University</strong>, I am confident in my ability to contribute to your team as you build high-performance, enterprise applications.
+                </p>
+                <p>
+                  During my time in the IT program, I focused on modern web technologies and software development. I have two years of hands-on experience at <strong>Local IT Solutions Co.</strong> and <strong>Surigao Bay IT Services</strong>. Using HTML, CSS, and JavaScript, I built responsive websites, converted design mockups, and <strong>improved page speeds by 30%</strong>.
+                </p>
+                <p>
+                  My strength lies in collaboration and active listening with cross-functional teams. Combined with strong problem-solving and time management, I consistently deliver clean, scalable code on deadline.
+                </p>
+                <p>
+                  I would love to bring my skills and work ethic to your team. Thank you for your time, and you may reach me at <a href="mailto:morandantelean@gmail.com">morandantelean@gmail.com</a> for an interview.
+                </p>
+              </div>
+
+              <div class="letter-sign-off">
+                <p>Sincerely,</p>
+                <strong class="letter-signature-name">LEAN MORANDANTE</strong><br>
+                <span>Applicant &bull; Front-End Web Developer</span>
+              </div>
+            </div>
+
+            <div class="inpage-letter-actions">
+              <a href="assets/Cover_Letter.docx" download class="btn btn-primary">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                Download Original Cover Letter (.docx)
+              </a>
+              <button class="btn btn-outline" onclick="copyEmail()">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                Copy Lean's Email
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHARACTER REFERENCES SECTION -->
+    <section class="section references-section" id="references">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Endorsements</span>
+          <h2 class="section-title">Character References</h2>
+          <p class="section-subtitle">Academic and professional mentors vouching for Lean's technical integrity, work ethic, and character.</p>
+        </div>
+
+        <div class="references-grid">
+          <!-- Ref 1 -->
+          <div class="glass-card ref-card">
+            <div class="ref-quote-icon">“</div>
+            <div class="ref-body">
+              <h3 class="ref-name">John Binze Escol</h3>
+              <p class="ref-title">IT Instructor</p>
+              <p class="ref-org">Caraga State University</p>
+              <div class="ref-email-link">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                <a href="mailto:BinzeEscol@carsu.edu.ph">BinzeEscol@carsu.edu.ph</a>
+              </div>
+              <span class="ref-badge">University Instructor</span>
+            </div>
+          </div>
+
+          <!-- Ref 2 -->
+          <div class="glass-card ref-card">
+            <div class="ref-quote-icon">“</div>
+            <div class="ref-body">
+              <h3 class="ref-name">Licca Senon</h3>
+              <p class="ref-title">IS Instructor</p>
+              <p class="ref-org">Caraga State University</p>
+              <div class="ref-email-link">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                <a href="mailto:LiccaSenon@carsu.edu.ph">LiccaSenon@carsu.edu.ph</a>
+              </div>
+              <span class="ref-badge">Information Systems Instructor</span>
+            </div>
+          </div>
+
+          <!-- Ref 3 -->
+          <div class="glass-card ref-card">
+            <div class="ref-quote-icon">“</div>
+            <div class="ref-body">
+              <h3 class="ref-name">Arlyn Onto</h3>
+              <p class="ref-title">Elementary Teacher</p>
+              <p class="ref-org">Panhutongan Elementary School &bull; DepEd</p>
+              <div class="ref-email-link">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                <a href="mailto:OntoArlyn@deped.edu.ph">OntoArlyn@deped.edu.ph</a>
+              </div>
+              <span class="ref-badge">DepEd Educator</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Let's Connect</span>
+          <h2 class="section-title">Get In Touch</h2>
+          <p class="section-subtitle">Interested in collaborating, hiring for front-end roles, or exploring projects together? Reach out directly!</p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Contact Info Column -->
+          <div class="contact-info-col">
+            <div class="glass-card contact-card">
+              <h3 class="card-title">Contact Information</h3>
+              <p class="card-text">
+                I am actively seeking opportunities to build impactful, responsive, and high-performance web products. Feel free to send an email, copy my details, or connect on social media.
+              </p>
+
+              <div class="contact-methods-list">
+                <div class="contact-method-item">
+                  <div class="method-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                  </div>
+                  <div class="method-details">
+                    <span class="method-label">Direct Email</span>
+                    <a href="mailto:morandantelean@gmail.com" class="method-val">morandantelean@gmail.com</a>
+                  </div>
+                  <button class="copy-btn" id="copyEmailBtn" title="Copy Email to Clipboard" onclick="copyEmail()">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                  </button>
+                </div>
+
+                <div class="contact-method-item">
+                  <div class="method-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  </div>
+                  <div class="method-details">
+                    <span class="method-label">Location</span>
+                    <span class="method-val">Placer, Surigao Del Norte, Philippines</span>
+                  </div>
+                </div>
+
+                <div class="contact-method-item">
+                  <div class="method-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                  </div>
+                  <div class="method-details">
+                    <span class="method-label">Facebook Profile</span>
+                    <a href="https://www.facebook.com/lean.morandante.52#" target="_blank" rel="noopener noreferrer" class="method-val">facebook.com/lean.morandante.52#</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="quick-cta-box">
+                <a href="mailto:morandantelean@gmail.com?subject=Front-End%20Web%20Developer%20Opportunity&body=Hi%20Lean,%20we%20reviewed%20your%20portfolio%20and%20would%20love%20to%20connect!" class="btn btn-primary btn-block">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                  Send Direct Email
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form Column -->
+          <div class="contact-form-col">
+            <div class="glass-card contact-form-card">
+              <h3 class="card-title">Send a Message</h3>
+              <form id="contactForm" onsubmit="handleFormSubmit(event)">
+                <div class="form-group">
+                  <label for="senderName">Your Name</label>
+                  <input type="text" id="senderName" class="form-control" placeholder="e.g. Miguel Fermin" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="senderEmail">Email Address</label>
+                  <input type="email" id="senderEmail" class="form-control" placeholder="e.g. miguel@whitecloak.com" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="senderSubject">Subject</label>
+                  <input type="text" id="senderSubject" class="form-control" placeholder="Front-End Developer Role / Project Collaboration" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="senderMessage">Message</label>
+                  <textarea id="senderMessage" class="form-control" rows="5" placeholder="Hi Lean, I saw your portfolio and would like to discuss..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block" id="formSubmitBtn">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                  Send Message
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-brand">
+        <a href="#hero" class="brand-logo">
+          <span class="logo-symbol">&lt;LM /&gt;</span>
+          <span class="logo-name">Lean Morandante</span>
+        </a>
+        <p class="footer-tagline">Front-End Web Developer &bull; Cum Laude IT Graduate</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#certifications">Certificates</a>
+        <a href="#resume">Resume</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Lean Morandante. Crafted with clean HTML5, CSS3, &amp; JavaScript.</p>
+        <button class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" title="Back to top">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg>
+          Top
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODAL: CERTIFICATE LIGHTBOX -->
+  <div class="modal-backdrop" id="certModal" aria-hidden="true" role="dialog" aria-labelledby="certModalTitle">
+    <div class="modal-box cert-modal-box">
+      <button class="modal-close-btn" onclick="closeCertModal()" aria-label="Close certificate preview">&times;</button>
+      <div class="modal-header">
+        <h3 id="certModalTitle">Certificate Preview</h3>
+        <span class="badge-pill-success" id="certModalIssuer">Verified Credential</span>
+      </div>
+      <div class="cert-modal-body">
+        <div class="cert-modal-img-wrap">
+          <img id="certModalImg" src="" alt="Certificate Preview">
+        </div>
+        <div class="cert-modal-details">
+          <p><strong>Credential ID:</strong> <code id="certModalId"></code></p>
+          <p><strong>Date of Issue:</strong> <span id="certModalDate"></span></p>
+          <p id="certModalDesc" class="cert-modal-desc"></p>
+          <div class="cert-modal-actions">
+            <a id="certModalDownload" href="" download class="btn btn-primary">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Download Certificate
+            </a>
+            <button class="btn btn-outline" onclick="closeCertModal()">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: RESUME PDF VIEWER -->
+  <div class="modal-backdrop" id="pdfModal" aria-hidden="true" role="dialog" aria-labelledby="pdfModalTitle">
+    <div class="modal-box pdf-modal-box">
+      <div class="pdf-modal-bar">
+        <div class="pdf-modal-title-wrap">
+          <span class="doc-icon">📑</span>
+          <h3 id="pdfModalTitle">Lean_Morandante_Resume.pdf</h3>
+        </div>
+        <div class="pdf-modal-bar-actions">
+          <a href="assets/Lean_Morandante_Resume.pdf" download="Lean_Morandante_Resume.pdf" class="btn btn-sm btn-primary">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download
+          </a>
+          <button class="modal-close-btn" onclick="closePdfModal()" aria-label="Close PDF Viewer">&times;</button>
+        </div>
+      </div>
+      <div class="pdf-iframe-container">
+        <iframe src="assets/Lean_Morandante_Resume.pdf#toolbar=1&navpanes=0" id="resumePdfIframe" title="Resume PDF Viewer">
+          <p>Your browser does not support inline PDF viewing. Please <a href="assets/Lean_Morandante_Resume.pdf" download>click here to download the PDF</a>.</p>
+        </iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: COVER LETTER -->
+  <div class="modal-backdrop" id="coverLetterModal" aria-hidden="true" role="dialog" aria-labelledby="coverLetterTitle">
+    <div class="modal-box letter-modal-box">
+      <div class="modal-header">
+        <h3 id="coverLetterTitle">Official Cover Letter</h3>
+        <button class="modal-close-btn" onclick="closeCoverLetterModal()" aria-label="Close cover letter">&times;</button>
+      </div>
+      <div class="letter-modal-body">
+        <div class="letter-sheet">
+          <div class="letter-meta-header">
+            <p class="letter-date">October 2, 2026</p>
+            <div class="recipient-info">
+              <strong>Miguel Fermin</strong><br>
+              Chief Technology Officer (CTO)<br>
+              White Cloak Technologies, Inc.<br>
+              Ortigas Center, Pasig City, Metro Manila, 1605
+            </div>
+          </div>
+
+          <div class="letter-salutation">Dear Mr. Fermin:</div>
+
+          <div class="letter-body-content">
+            <p>
+              I am writing to express my interest in applying for the <strong>Front-End Web Developer</strong> position at <strong>White Cloak Technologies, Inc.</strong> I learned about this opportunity through your official hiring channels. As an IT graduate (<strong>Cum Laude</strong>) from <strong>Caraga State University</strong>, I am confident in my ability to contribute to your team as you build high-performance, enterprise applications.
+            </p>
+            <p>
+              During my time in the IT program, I focused on modern web technologies and software development. I have two years of hands-on experience at <strong>Local IT Solutions Co.</strong> and <strong>Surigao Bay IT Services</strong>. Using HTML, CSS, and JavaScript, I built responsive websites, converted design mockups, and <strong>improved page speeds by 30%</strong>.
+            </p>
+            <p>
+              My strength lies in collaboration and active listening with cross-functional teams. Combined with strong problem-solving and time management, I consistently deliver clean, scalable code on deadline.
+            </p>
+            <p>
+              I would love to bring my skills and work ethic to your team. Thank you for your time, and you may reach me at <a href="mailto:morandantelean@gmail.com">morandantelean@gmail.com</a> for an interview.
+            </p>
+          </div>
+
+          <div class="letter-sign-off">
+            <p>Sincerely,</p>
+            <strong class="letter-signature-name">LEAN MORANDANTE</strong><br>
+            <span>Applicant &bull; Front-End Web Developer</span>
+          </div>
+        </div>
+
+        <div class="letter-modal-actions">
+          <a href="assets/Cover_Letter.docx" download class="btn btn-primary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download Original .DOCX
+          </a>
+          <button class="btn btn-outline" onclick="closeCoverLetterModal()">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION CONTAINER -->
+  <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
